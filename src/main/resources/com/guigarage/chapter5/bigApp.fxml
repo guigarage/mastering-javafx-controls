@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<BorderPane padding="$x1" prefHeight="564.0" prefWidth="457.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.guigarage.masteringcontrols.ViewController">
+<BorderPane padding="$x1" prefHeight="564.0" prefWidth="457.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.guigarage.chapter5.ViewController">
   <bottom>
     <VBox prefHeight="-1.0" prefWidth="-1.0">
       <children>

@@ -23,7 +23,7 @@ public class PieChartExample extends Application {
         PieChart chart = new PieChart(pieChartData);
         chart.setTitle("Tenure of Doctor Who");
 
-        chart.getStylesheets().add(getClass().getResource("test.css").toExternalForm());
+        chart.getStylesheets().add(getClass().getResource("pie.css").toExternalForm());
 
         StackPane myPane = new StackPane();
         myPane.getChildren().add(chart);

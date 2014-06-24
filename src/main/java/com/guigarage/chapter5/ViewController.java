@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.scene.text.Text;
@@ -56,7 +57,7 @@ public class ViewController {
 
     public void initialize() {
         rectangleToggle.setUserData(new Rectangle(50, 50));
-        circleToggle.setUserData(0.1d);
+        circleToggle.setUserData(new Circle(20));
         textToggle.setUserData(new Text("TEXT"));
 
         group = new ToggleGroup();

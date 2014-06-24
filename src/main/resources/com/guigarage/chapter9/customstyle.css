@@ -1,0 +1,32 @@
+#my-action-button {
+    -fx-background-color: darkorange;
+    -fx-font-size: 16pt;
+    -fx-font-family: "Courier New";
+}
+
+.dialog-button {
+    -fx-background-color: khaki;
+    -fx-border-width: 20;
+    -fx-border-color: red;
+}
+
+.tool-bar .button {
+    -fx-background-color: lightskyblue;
+    -fx-border-width: 1;
+    -fx-border-color: darkgrey;
+    -fx-font-size: 6pt;
+}
+
+.vbox > .button {
+    -fx-border-width: 1;
+}
+
+.vbox .button {
+    -fx-border-width: 8;
+}
+
+.button {
+    -fx-border-width: 4;
+    -fx-border-color: blue;
+    -fx-background-color: yellow;
+}

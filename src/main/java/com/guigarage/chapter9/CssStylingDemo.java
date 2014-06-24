@@ -49,7 +49,7 @@ public class CssStylingDemo extends Application {
 
         Scene myScene = new Scene(myPane);
 
-//        myScene.getStylesheets().addAll(getClass().getResource("customstyle.css").toExternalForm());
+        myScene.getStylesheets().addAll(getClass().getResource("customstyle.css").toExternalForm());
 
         primaryStage.setScene(myScene);
         primaryStage.setTitle("App");
