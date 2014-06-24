@@ -1,0 +1,9 @@
+#dark-button{
+    -fx-background-color: darkred;
+    -fx-text-fill: ladder(darkred, white 0%, black 100%);
+}
+
+#light-button{
+    -fx-background-color: lightyellow;
+    -fx-text-fill: ladder(lightyellow, white 0%, black 100%);
+}

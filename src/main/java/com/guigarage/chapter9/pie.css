@@ -1,0 +1,15 @@
+.default-color0.chart-pie { -fx-pie-color: blue; }
+.default-color1.chart-pie { -fx-pie-color: lightblue; }
+.default-color2.chart-pie { -fx-pie-color: darkblue; }
+
+.chart-pie-label-line {
+    -fx-stroke: black;
+}
+
+.chart-pie-label {
+    -fx-fill: black;
+    -fx-font-size: 0.7em;
+}
+.chart-legend {
+    -fx-background-color:  lightyellow;
+}

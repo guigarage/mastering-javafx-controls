@@ -1,0 +1,19 @@
+#login-pane {
+    -fx-background-color: black;
+}
+
+#login-button {
+    -fx-background-color: green;
+    -fx-text-fill: whitesmoke;
+}
+
+#login-label {
+    -fx-text-fill: whitesmoke;
+}
+
+#login-textfield {
+    -fx-background-color: #191970;
+    -fx-background-radius: 10.0;
+    -fx-text-fill: whitesmoke;
+    -fx-prompt-text-fill: rgb(94.0, 203.0, 234.0);
+}
