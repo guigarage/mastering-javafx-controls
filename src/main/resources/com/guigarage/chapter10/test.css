@@ -1,0 +1,6 @@
+.triangle {
+    -fx-skin: 'com.guigarage.chapter10.AlternativeTriangleButtonSkin';
+    -fx-animation-duration: '2s';
+    -fx-triangle-fill: orange;
+    -fx-triangle-stroke: black;
+}
