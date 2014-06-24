@@ -1,0 +1,56 @@
+package com.guigarage.chapter8;
+import javafx.embed.swt.FXCanvas;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.layout.RowLayout;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Shell;
+public class SwtDemo {
+    public static void main(String[] args) {
+        final Display display = new Display();
+        final Shell shell = new Shell(display);
+        shell.setText("SWT meets JavaFX");
+        final RowLayout layout = new RowLayout();
+        shell.setLayout(layout);
+        final org.eclipse.swt.widgets.Button swtButton =
+                new org.eclipse.swt.widgets.Button(shell, SWT.PUSH);
+        swtButton.setText("SWT Button");
+        final FXCanvas fxCanvas = new FXCanvas(shell, SWT.NONE) {
+            public Point computeSize(int wHint, int hHint, boolean changed) {
+                getScene().getWindow().sizeToScene();
+                int width = (int) getScene().getWidth();
+                int height = (int) getScene().getHeight();
+                return new Point(width, height);
+            }
+        };
+        final Button jfxButton = new Button("JavaFX Button");
+        Scene scene = new Scene(new StackPane(jfxButton));
+        fxCanvas.setScene(scene);
+        swtButton.addListener(SWT.Selection, new Listener() {
+            public void handleEvent(Event event) {
+                jfxButton.setDisable(!jfxButton.isDisable());
+                shell.layout();
+            }
+        });
+        jfxButton.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                swtButton.setEnabled(!swtButton.isEnabled());
+                shell.layout();
+            }
+        });
+        shell.open();
+        while (!shell.isDisposed()) {
+            if (!display.readAndDispatch()) {
+                display.sleep();
+            }
+        }
+        display.dispose();
+    }
+}
